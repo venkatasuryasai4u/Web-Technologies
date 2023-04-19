@@ -1,0 +1,56 @@
+body
+{
+  background-image:  url("istockphoto-842448020-612x612.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p1
+{
+  width:50%;
+  height: 500px;
+  margin:auto;
+  padding: 10px;
+  
+}
+
+.p1 h1
+{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+}
+
+.p1 h2
+{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: violet;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  color: purple;
+  font-size:30px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+button
+{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

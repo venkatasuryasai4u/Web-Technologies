@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant Bill Generator</title>
+  <style media="screen">
+     body
+     {
+       background-image: url("");
+       background-repeat: no-repeat;
+       background-size: cover;
+     }
+    .box1 {
+      border: 5px solid;
+      border-color: yellow;
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+      background-color: ;
+      opacity: 0.8;
+    }
+
+    .box1 h1 {
+      text-align: center;
+    }
+
+  </style>
+  <script type="text/javascript">
+    function f() {
+
+      const v1 = parseFloat(document.getElementById("appetizers").value);
+      const v2 = parseFloat(document.getElementById("entrees").value);
+      const v3 = parseFloat(document.getElementById("drinks").value);
+      const v4 = parseFloat(document.getElementById("desserts").value);
+      const v5 = v1 + v2 + v3 + v4;
+      document.getElementById('p').innerHTML = v5;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="box1">
+    <h1>Restaurant Bill Generator</h1>
+    <form class="" action="" method="post">
+      <table cellspacing = 10px>
+        <tr>
+          <td>
+            <label for="appetizers">Appetizers:</label>
+          </td>
+          <td>
+            <select id="appetizers" name="appetizers">
+              <option value="0">None</option>
+              <option value="4.99">Mozzarella Sticks</option>
+              <option value="5.99">Fried Calamari</option>
+              <option value="6.99">Garlic Bread</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="entrees">Entrees:</label>
+          </td>
+          <td>
+            <select id="entrees" name="entrees">
+              <option value="0">None</option>
+              <option value="12.99">Spaghetti and Meatballs</option>
+              <option value="14.99">Chicken Alfredo</option>
+              <option value="16.99">Steak and Fries</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="drinks">Drinks</label>
+          </td>
+          <td>
+            <select id="drinks" name="drinks">
+              <option value="0">None</option>
+              <option value="2.99">Soda</option>
+              <option value="4.99">Beer</option>
+              <option value="7.99">Wine</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Desserts">Desserts</label>
+          </td>
+          <td>
+            <select id="desserts" name="desserts">
+              <option value="0">None</option>
+              <option value="3.99">Cheesecake</option>
+              <option value="4.99">Tiramisu</option>
+              <option value="5.99">Chocolate Cake</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" name="button" onclick="f()">submit</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Your total is:</p>
+          </td>
+          <td>
+            <p id="p"></p>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>

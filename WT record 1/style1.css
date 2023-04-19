@@ -1,0 +1,62 @@
+body{
+      background-color:blue;
+      background-image:url("img6.webp");
+      background-repeat:no-repeat;
+      background-size: cover;
+
+    }
+
+.main {
+  border: 5px solid;
+  border-color:yellow;
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+  background-color: #87CEEB;
+  opacity:0.8;
+  }
+
+.main h1{
+
+       text-align:center;
+       color:green;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 40px;
+
+        }
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  color: purple;
+  font-size:30px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input {
+
+       border:2px solid red;
+       border-radius:4px;
+     }
+
+form{
+       font-family: Arial, Helvetica, sans-serif;
+
+    }
+input[type=submit],input[type=reset]
+{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

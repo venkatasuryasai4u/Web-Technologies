@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      h2{
+        float:right;
+        word-spacing: 30px;
+        padding: 20px;
+      }
+
+      .logo
+      {
+        padding-left: 20px;
+        float:left;
+      }
+      .logo img{
+        padding-left: 50px;
+        padding-top: 5px;
+      }
+      .logo h1{
+        float:right;
+        padding-left: 500px;
+      }
+      body
+      {
+        background-color:#da2c43;
+        color: #87CEEB;
+      }
+    </style>
+  </head>
+  <body bg color = "yellow">
+    <div class="c1">
+      <div class="logo">
+        <img src="logo.jpg" alt="" height = 100px />
+        <h1>ANITS</h1>
+      </div>
+      <script type="text/javascript">
+        function currentTime() {
+  let date = new Date();
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+  if(hh === 0){
+      hh = 12;
+  }
+  if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+
+   let time =date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate()+" " + hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerHTML = time;
+  let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+      </script>
+      <h2 id = "clock" onclick="currentTime()">time
+      </h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Bill Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Restaurant Bill Generator</h1>
+		<form id="order-form">
+			<label for="appetizers">Appetizers:</label>
+			<select id="appetizers" name="appetizers">
+				<option value="0">None</option>
+				<option value="4.99">Mozzarella Sticks</option>
+				<option value="5.99">Fried Calamari</option>
+				<option value="6.99">Garlic Bread</option>
+			</select>
+
+			<label for="entrees">Entrees:</label>
+			<select id="entrees" name="entrees">
+				<option value="0">None</option>
+				<option value="12.99">Spaghetti and Meatballs</option>
+				<option value="14.99">Chicken Alfredo</option>
+				<option value="16.99">Steak and Fries</option>
+			</select>
+
+			<label for="drinks">Drinks:</label>
+			<select id="drinks" name="drinks">
+				<option value="0">None</option>
+				<option value="2.99">Soda</option>
+				<option value="4.99">Beer</option>
+				<option value="7.99">Wine</option>
+			</select>
+
+			<label for="desserts">Desserts:</label>
+			<select id="desserts" name="desserts">
+				<option value="0">None</option>
+				<option value="3.99">Cheesecake</option>
+				<option value="4.99">Tiramisu</option>
+				<option value="5.99">Chocolate Cake</option>
+			</select>
+
+			<button type="submit" id="submit-btn">Calculate Total</button>
+		</form>
+
+		<div id="total-container">
+			<p>Your total is: <span id="total"></span></p>
+		</div>
+	</div>
+
+	<script src="script1.js"></script>
+</body>
+</html>
+
+#JAVASCRIPTCODE
+const orderForm = document.getElementById('order-form');
+const appetizers = document.getElementById('appetizers');
+const entrees = document.getElementById('entrees');
+const drinks = document.getElementById('drinks');
+const desserts = document.getElementById('desserts');
+const submitBtn = document.getElementById('submit-btn');
+const total = document.getElementById('total');
+
+// Calculate the total price
+function calculateTotal() {
+  const appetizersPrice = parseFloat(appetizers.value);
+  const entreesPrice = parseFloat(entrees.value);
+  const drinksPrice = parseFloat(drinks.value);
+  const dessertsPrice = parseFloat(desserts.value);
+
+  const totalPrice = appetizersPrice + entreesPrice + drinksPrice + dessertsPrice;
+  total.innerText = `$${totalPrice.toFixed(2)}`;
+}
+
+// Add event listener to the form
+orderForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  calculateTotal();
+});
+
+// Add event listeners to the select elements
+appetizers.addEventListener('change', calculateTotal);
+entrees.addEventListener('change', calculateTotal);
+drinks.addEventListener('change', calculateTotal);
+desserts.addEventListener('change', calculateTotal);
+
+#CSSCODE
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+select {
+	margin-bottom: 20px;
+}
+
+button {
+	margin-top: 20px;
+}
+
+#total-container {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#total {
+	font-weight: bold;
+}
