@@ -1,0 +1,75 @@
+<!-- views/cart.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fines</title>
+    <style> 
+      body {
+        background-color: #F5F9FC;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        color: #4D6CB4;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      
+      h2 {
+        color: #2B2B2B;
+        font-size: 24px;
+        margin: 20px 0;
+        text-align: center;
+      }
+      
+      form {
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+      }
+      
+      input[type="checkbox"] {
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        background-color: #4D6CB4;
+        border: none;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #304A8A;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Fines</h1>
+    <h2><%=user%></h2>
+    <p></p>
+    <form action="/checkout" method="post" id="checkoutForm">
+      <input type="checkbox" name="Id card" value="10" /> Id card - ₹10<br />
+      <input type="checkbox" name="Delay in Record/Assignment" value="20" /> Record - ₹20<br />
+      <input type="checkbox" name="Using Phone" value="30" /> Phone - ₹50<br />
+      <input type="checkbox" name="Late to class" value="30" /> Late to class - ₹10<br />
+      <input type="checkbox" name="Absent" value="30" /> Absent - ₹20<br />
+      <input type="submit" value="Checkout" />
+      
+    </form>
+    
+    
+
+  </body>
+</html>

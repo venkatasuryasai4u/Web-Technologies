@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fines</title>
+    <style>
+      table {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fines</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < itemlist.length; i++) { %>
+          <tr>
+            <td><%= itemlist[i].name %></td>
+            <td><%= itemlist[i].price %></td>
+          </tr>
+        <% } %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <td><%= total %></td>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="/faculty"><button class="button">Home</button></a>
+
+  </body>
+</html>

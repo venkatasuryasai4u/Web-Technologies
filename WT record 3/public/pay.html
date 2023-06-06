@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+
+      .payment-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #1E90FF;
+        text-align: center;
+      }
+
+      .payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .payment-method {
+        width: calc(50% - 10px);
+        background-color: #1E90FF;
+        color: #FFFFFF;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left:130px;
+      }
+
+      .payment-method img {
+        width: 80%;
+        max-width: 150px;
+        margin-bottom: 10px;
+      }
+
+      .payment-method h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .payment-method p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 600px) {
+        .payment-method {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="payment-container">
+      <h1>Payment Details</h1>
+        <div class="payment-method">
+           <img src="qr.png" alt="abc">
+          <h3>QR Code</h3>
+          <p>Scan the QR code to make a payment.</p>
+          <button>Scan QR Code</button>
+        </div>
+        <div class="payment-method">
+            
+          <h3>UPI</h3>
+          <p>Use your UPI ID to make a payment.</p>
+          <button>UPI:paytm@upi</button>
+        </div>
+        <div class="payment-method">
+          <img src="https://icons.iconarchive.com/icons/graphicloads/100-flat-2/256/mobile-icon.png" alt="Mobile Payment">
+          <h3>Mobile Payment</h3>
+          <p>Make a payment using your mobile number.</p>
+          <button>+91 9502352532</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Field</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background-image: url("pwd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+		.password-field {
+			width: 200px;
+			height: 40px;
+			border: none;
+			border-radius: 5px;
+			background-color:none;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+			font-size: 20px;
+			text-align: center;
+			
+			
+
+		}
+
+		.submit-button {
+			margin-top: 10px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f5f5f5;
+			color: black;
+			font-size: 16px;
+			cursor: pointer;
+		}a{
+			text-decoration: none;
+		}
+		.submit-button:hover{
+			background-color: rgb(16, 117, 179);
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="">
+		
+		<input  name = "password" type="password" class="password-field" placeholder="Enter 4 digit pin" pattern="[0-9]{4}" required="required" >
+		<button type="submit" class="submit-button">Submit</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Total Fine</title>
+    <style>
+       /* body style */
+         /* body style */
+        body {
+        background-color: #f0f7fa;
+        font-family: Arial, sans-serif;
+        }
+
+        /* table style */
+        table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        }
+
+        th,
+        td {
+        text-align: left;
+        padding: 10px;
+        }
+
+        th {
+        background-color: #2196F3;
+        color: #fff;
+        }
+
+        tr:nth-child(even) {
+        background-color: #f2f2f2;
+        }
+
+        /* button style */
+        .button {
+  background-color: #4b89ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin-left:46%;
+}
+
+.button:hover {
+  background-color: #3b73d1;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: #2c5ba8;
+  transform: translateY(0px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+  </head>
+  <body>
+    <h1 align="center">Total Fine</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Total Price</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.forEach(order => { %>
+          <tr>
+            <td><%= order.items %></td>
+            <td><%= order.total %></td>
+            <td><%= order.date %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <a href="/"><button class="button">Home</button></a><a href="/pay"><button class="button">Pay</button></a>
+  </body>
+</html>

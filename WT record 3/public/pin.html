@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: #E8F1F9;
+        font-family: Arial, sans-serif;
+        }
+        
+        form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        }
+        
+        input[type="text"] {
+        border: none;
+        border-bottom: 2px solid #4D6CB4;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 300px;
+        font-size: 16px;
+        color: #2B2B2B;
+        }
+        
+        input[type="submit"] {
+        background-color: #4D6CB4;
+        border: none;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+        }
+        
+        input[type="submit"]:hover {
+        background-color: #304A8A;
+        }
+    
+  </style>
+</head>
+<body>
+    <div>
+        
+    <form action="/checkpage" method="post">
+        <input type="text" name="name" placeholder="Enter pin number" required>
+        <input type="submit" value="add fines" name="submit">
+        <input type="submit" value="view fines" name="check">
+    </form>
+    </div>
+    
+</body>
+</html>
